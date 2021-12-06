@@ -1,7 +1,9 @@
+copied from https://github.com/tier4/wasim/tree/feature/osm-coordinator
+
 # Requirements
 
 ```shell
-apt-get install libgeographic-dev
+apt-get install libgeographic-dev librapidxml-dev
 ```
 
 # Build
@@ -15,23 +17,9 @@ make
 make install
 ```
 
-## For Arm
-
-install requirements 
-```shell
-apt-get install g++-arm-linux-gnueabihf
-```
-
-build
-```shell
-mkdir cross-build && cd cross-build
-cmake .. -DCMAKE_TOOLCHAIN_FILE=../arm-toolchain.cmake
-make
-make install
-```
 
 # Run
 
 ```shell
-osm-coordinator path/to/osm
+osm-coordinator path/to/osm > map_origin.param.yaml
 ```
